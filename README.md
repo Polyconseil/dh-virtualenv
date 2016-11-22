@@ -1,5 +1,12 @@
 # dh-virtualenv
 
+This is our fork of spotify's dh-virtualenv. It contains various fixes waiting to be merged:
+
+ buildsystem:
+
+ * allows to disable the use of requirements.txt
+ * fix the sheebang of entrypoints / programs in $VIRTUAL_ENV/bin when using a custom virtualenv name.
+
 [![Build Status](https://travis-ci.org/spotify/dh-virtualenv.png)](https://travis-ci.org/spotify/dh-virtualenv)
 
 dh-virtualenv is a tool that aims to combine Debian packaging with
