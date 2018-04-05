@@ -52,12 +52,13 @@ sub get_exec {
 
 sub get_python {
     my $this = shift;
-    return $this->get_exec("python");
+    my $python_name = $ENV{DH_VIRTUALENV_PYTHON_EXECUTABLE} || "python";
+    return $this->get_exec($python_name);
 }
 
 sub get_pip {
     my $this = shift;
-    return ($this->get_exec("python"), "-m", "pip");
+    return ($this->get_python(), "-m", "pip");
 }
 
 sub configure {
